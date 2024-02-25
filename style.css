@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgb(37, 9, 37);
+    color: white;
+    height:  65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px ;   
+}
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.Container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Varela Round', sans-serif;
+    position: relative;
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: pink;
+}
+.gameInfo{
+    padding: 0px 34px;
+    font-family: 'Dancing Script', cursive;
+}
+.info{
+    font-size: 30px;
+
+}
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    cursor: pointer;
+    padding: 5px  20px;
+    margin: 5px 23px;
+    border-radius: 10px;
+    background-color:  red;
+    color: solid black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#reset :hover{
+    color: orange;
+    font-size: 40px;
+}
+.line{
+    background-color: black;
+    width: 3px;
+    height: 20vw;
+    position: absolute;
+}
+@media screen and (max-width: 1000px) {
+    .gameContainer {
+        flex-wrap: wrap;
+    }
+    .gameInfo {
+        margin-top: 34px;
+    }
+    .Container {
+        display: grid;
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    .line {
+       width: 0;
+       height: 0;
+    }
+}
